@@ -23,7 +23,7 @@ function labb1_register_scripts()
   wp_enqueue_script(
     'main-js',
     get_template_directory_uri() . '/assets/js/script.js',
-    [],
+    ['jquery-js'],
     false,
     true
   );
