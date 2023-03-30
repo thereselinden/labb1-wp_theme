@@ -28,4 +28,23 @@
           </div>
         </div>
       </header>
+      <div class="mobile-search">
+        <form id="searchform" class="searchform">
+          <div>
+            <label class="screen-reader-text">Sök efter:</label>
+            <input type="text" />
+            <input type="submit" value="Sök" />
+          </div>
+        </form>
+      </div>
+
+      <nav id="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+             <?php wp_nav_menu(['theme_location' => 'header-menu']); ?>
+            </div>
+          </div>
+        </div>
+      </nav>
   <body>
