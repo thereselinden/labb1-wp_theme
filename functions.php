@@ -1,8 +1,7 @@
 <?php 
-/*
+/****
   Register CSS StyleSheets
 */
-
 function labb1_register_styles()
 {
   $version = wp_get_theme()->get('Version');
@@ -14,10 +13,9 @@ function labb1_register_styles()
 
 add_action('wp_enqueue_scripts', 'labb1_register_styles');
 
-/*
+/****
   Register a new script
 */
-
 function labb1_register_scripts()
 {
   wp_enqueue_script(
@@ -39,9 +37,12 @@ function labb1_register_scripts()
 }
 add_action('wp_enqueue_scripts', 'labb1_register_scripts');
 
-/* 
+
+/****
   Theme support to dynamically add title tag  
 */
+
+// TODO: How to display page title instead of site title?
 function labb1_theme_setup()
 {
   add_theme_support('title-tag');
@@ -49,4 +50,14 @@ function labb1_theme_setup()
 }
 add_action('after_setup_theme', 'labb1_theme_setup');
 
+/**** 
+
+*/
+function labb1_register_my_menus()
+{
+  register_nav_menus([
+    'header-menu' => __('Header Menu'),
+  ]);
+}
+add_action('init', 'labb1_register_my_menus');
 ?>
