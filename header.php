@@ -2,6 +2,8 @@
 <html <?php language_attributes(); ?>>
   <head>
   <meta charset="<?php bloginfo('charset'); ?>">
+  <!-- TODO FUNKAR INTE - PGA STATISK FIL?  -->
+  <!-- <title><?php wp_title()?></title> -->
     <?php wp_head() ?>
   </head>
   <header id="header">
