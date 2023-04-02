@@ -37,21 +37,20 @@ function labb1_register_scripts()
 }
 add_action('wp_enqueue_scripts', 'labb1_register_scripts');
 
-
 /****
   Theme support to dynamically add title tag  
 */
 
-// TODO: How to display page title instead of site title?
 function labb1_theme_setup()
 {
   add_theme_support('title-tag');
   //add_theme_support('custom-logo');
+  add_theme_support('post-thumbnails'); //to allow image 
 }
 add_action('after_setup_theme', 'labb1_theme_setup');
 
 /**** 
-
+  Theme support to set up menues 
 */
 function labb1_register_my_menus()
 {
@@ -60,4 +59,15 @@ function labb1_register_my_menus()
   ]);
 }
 add_action('init', 'labb1_register_my_menus');
+
+//!
+  /**** 
+   Theme support to add excperts to blog overview page
+  */
+  // function labb1_the_excerpt() {
+
+    
+  // 	echo apply_filters( 'labb1_the_excerpt', get_the_excerpt() );
+  // }
+//! 
 ?>
