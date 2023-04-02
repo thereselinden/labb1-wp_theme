@@ -5,46 +5,17 @@
     <div class="container">
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-9">
-        <h1><?php wp_title()?></h1>
-
-        <!-- DET SKA VARA
-      
-        1. Img 
-        2. Title 
-        3. Meta (datum, författare, kateogirer
-        4. Content 
-        
-        -->
+        <h1><?php wp_title($sep = '')?></h1>
 
         <?php if (have_posts()) {
           while (have_posts()) {
           the_post(); ?>
-           <!-- <ul class="meta">
-            <li >
-              <i class="fa fa-calendar"></i>
-              <?php the_date(); ?>
-            </li>
-            <li>
-              <i class="fa fa-user"></i>
-              <?php the_author(); ?>
-            </li>
-
-            <li>
-              <i class="fa fa-tag"></i>
-              <?php the_category(); ?>
-            </li>
-          </ul>   -->
-
-          
+        
           <article>
             <?php if ( is_home()) {  ?>
-             
-              
-              <!-- HÄR SKA DET VARA EN BILD -->
               <?php the_post_thumbnail(array(636, 424)); ?>
               <h2>
               <a href="<?php the_permalink() ?>" ><?php the_title(); ?></a>
-                <!-- <?php the_title(); ?> -->
               </h2>
               <ul class="meta">
                 <li >
@@ -52,8 +23,11 @@
                   <?php echo get_the_date(); ?>
                 </li>
                 <li>
+                  <!-- NEEDS TO BE WRAPPED IN A AND DIRECTED TO AUTHOR -->
                   <i class="fa fa-user"></i>
-                  <?php the_author(); ?>
+                  <a href="<?php get_the_author_posts_link() ?>" ><?php the_author(); ?></a>
+
+                  <!-- <?php the_author(); ?> -->
                 </li>
                 <li>
                   <i class="fa fa-tag"></i>
@@ -66,7 +40,6 @@
               the_content();
             } ?>
 
-            <!-- <?php the_content()?> -->
           </article>
         <?php }} ?>
           
