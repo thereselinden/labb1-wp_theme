@@ -37,12 +37,36 @@
 
           
           <article>
+            <?php if ( is_home()) {  ?>
+             
+              
+              <!-- HÄR SKA DET VARA EN BILD -->
+              <?php the_post_thumbnail(array(636, 424)); ?>
+              <h2>
+              <a href="<?php the_permalink() ?>" ><?php the_title(); ?></a>
+                <!-- <?php the_title(); ?> -->
+              </h2>
+              <ul class="meta">
+                <li >
+                  <i class="fa fa-calendar"></i>
+                  <?php echo get_the_date(); ?>
+                </li>
+                <li>
+                  <i class="fa fa-user"></i>
+                  <?php the_author(); ?>
+                </li>
+                <li>
+                  <i class="fa fa-tag"></i>
+                  <?php the_category(); ?>
+                </li>
+              </ul>
+             <?php 
+              the_excerpt();
+            } else {
+              the_content();
+            } ?>
 
-          <?php the_content(); ?>
-
-          <!-- VISAR ENDAST UTDRAGEN TEXT INGEN BILD  -->
-          <!-- <?php the_excerpt(); ?> -->
-
+            <!-- <?php the_content()?> -->
           </article>
         <?php }} ?>
           
