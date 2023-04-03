@@ -7,7 +7,6 @@
         <div id="primary" class="col-xs-12 col-md-9">
           <h1><?php wp_title($sep = '') ?></h1>
 
-
           <?php while (have_posts()) {
             the_post(); ?>
 
@@ -29,7 +28,7 @@
                   </li>
                   <li>
                     <i class="fa fa-tag"></i>
-                    <?php the_category(); ?>
+                    <?php the_category($separator = ', '); ?>
                   </li>
                 </ul>
               <?php
@@ -39,50 +38,6 @@
 
           <?php } ?>
 
-          <!-- VISAR ENDAST UTDRAGEN TEXT INGEN META DATA ELLER BILD -->
-          <!-- <?php if (have_posts()) {
-                  while (have_posts()) {
-                    the_post(); ?>
-              <article>
-                <?php the_excerpt(); ?>
-              </article>
-          <?php }
-                } ?> -->
-
-          <!-- KOLLAR VILKEN SIDA JAG ÄR PÅ, GJORDE DETTA INNAN JAG HADE SINGLE.PHP -->
-          <!-- <?php if (have_posts()) {
-                  while (have_posts()) {
-                    the_post(); ?>
-
-              <article>
-                <?php if (is_home()) {  ?>
-                  <?php the_post_thumbnail(array(636, 424)); ?>
-                  <h2>
-                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                  </h2>
-                  <ul class="meta">
-                    <li>
-                      <i class="fa fa-calendar"></i>
-                      <?php echo get_the_date(); ?>
-                    </li>
-                    <li>
-                      <i class="fa fa-user"></i>
-                      <a href="<?php get_the_author_posts_link() ?>"><?php the_author(); ?></a>
-                    </li>
-                    <li>
-                      <i class="fa fa-tag"></i>
-                      <?php the_category(); ?>
-                    </li>
-                  </ul>
-                <?php
-                      the_excerpt();
-                    } else {
-                      the_content();
-                    } ?>
-
-              </article>
-          <?php }
-                } ?> -->
 
         </div>
         <aside id="secondary" class="col-xs-12 col-md-3">
