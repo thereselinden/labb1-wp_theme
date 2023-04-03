@@ -56,6 +56,7 @@ function labb1_register_my_menus()
 {
   register_nav_menus([
     'header-menu' => __('Header Menu'),
+    'aside-menu' => __('Aside Menu'),
   ]);
 }
 add_action('init', 'labb1_register_my_menus');
