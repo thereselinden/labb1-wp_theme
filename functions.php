@@ -60,15 +60,3 @@ function labb1_register_my_menus()
   ]);
 }
 add_action('init', 'labb1_register_my_menus');
-
-//!
-  /**** 
-   Theme support to add excperts to blog overview page
-  */
-  // function labb1_the_excerpt() {
-
-    
-  // 	echo apply_filters( 'labb1_the_excerpt', get_the_excerpt() );
-  // }
-//! 
-?>
