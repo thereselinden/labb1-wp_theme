@@ -24,35 +24,35 @@
                   </li>
                   <li>
                     <i class="fa fa-user"></i>
-                    <a href="<?php get_the_author_posts_link() ?>"><?php the_author(); ?></a>
+                    <!-- BEHÖVER EN LÄNK FÖR ATT KOMMA TILL AUTHOR.PHP -->
+                    <a href="#"><?php the_author(); ?></a>
                   </li>
                   <li>
                     <i class="fa fa-tag"></i>
                     <?php the_category(); ?>
                   </li>
                 </ul>
-                <?php
+              <?php
                 the_excerpt();
-                ?>
-
+              } ?>
             </article>
-        <?php }
-            } ?>
 
-        <!-- VISAR ENDAST UTDRAGEN TEXT INGEN META DATA ELLER BILD -->
-        <!-- <?php if (have_posts()) {
-                while (have_posts()) {
-                  the_post(); ?>
+          <?php } ?>
+
+          <!-- VISAR ENDAST UTDRAGEN TEXT INGEN META DATA ELLER BILD -->
+          <!-- <?php if (have_posts()) {
+                  while (have_posts()) {
+                    the_post(); ?>
               <article>
                 <?php the_excerpt(); ?>
               </article>
           <?php }
-              } ?> -->
+                } ?> -->
 
-        <!-- KOLLAR VILKEN SIDA JAG ÄR PÅ, GJORDE DETTA INNAN JAG HADE SINGLE.PHP -->
-        <!-- <?php if (have_posts()) {
-                while (have_posts()) {
-                  the_post(); ?>
+          <!-- KOLLAR VILKEN SIDA JAG ÄR PÅ, GJORDE DETTA INNAN JAG HADE SINGLE.PHP -->
+          <!-- <?php if (have_posts()) {
+                  while (have_posts()) {
+                    the_post(); ?>
 
               <article>
                 <?php if (is_home()) {  ?>
@@ -75,14 +75,14 @@
                     </li>
                   </ul>
                 <?php
-                    the_excerpt();
-                  } else {
-                    the_content();
-                  } ?>
+                      the_excerpt();
+                    } else {
+                      the_content();
+                    } ?>
 
               </article>
           <?php }
-              } ?> -->
+                } ?> -->
 
         </div>
         <aside id="secondary" class="col-xs-12 col-md-3">
