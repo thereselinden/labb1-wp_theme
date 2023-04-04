@@ -44,7 +44,7 @@ function labb1_theme_setup()
 {
   add_theme_support('title-tag');
   //add_theme_support('custom-logo');
-  add_theme_support('post-thumbnails'); //to allow image 
+  add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'labb1_theme_setup');
 
@@ -58,4 +58,4 @@ function labb1_register_my_menus()
     'aside-menu' => __('Aside Menu'),
   ]);
 }
-add_action('init', 'labb1_register_my_menus');
+add_action('after_setup_theme', 'labb1_register_my_menus');
