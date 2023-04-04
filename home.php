@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php echo 'hello from home.php' ?>
+
 <main>
   <section>
     <div class="container">
@@ -9,7 +10,6 @@
 
           <?php while (have_posts()) {
             the_post(); ?>
-
             <article>
               <?php if (is_home()) {  ?>
                 <?php the_post_thumbnail(array(636, 424)); ?>
@@ -23,8 +23,7 @@
                   </li>
                   <li>
                     <i class="fa fa-user"></i>
-                    <!-- BEHÖVER EN LÄNK FÖR ATT KOMMA TILL AUTHOR.PHP -->
-                    <a href="#"><?php the_author(); ?></a>
+                    <a href=" <?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> <?php the_author(); ?></a>
                   </li>
                   <li>
                     <i class="fa fa-tag"></i>
@@ -35,7 +34,6 @@
                 the_excerpt();
               } ?>
             </article>
-
           <?php } ?>
 
 
