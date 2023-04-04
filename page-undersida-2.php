@@ -16,7 +16,9 @@
           } ?>
         </div>
         <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
-          <ul class="side-menu">
+          <?php wp_nav_menu(['theme_location' => 'aside-menu']); ?>
+
+          <!-- <ul class="side-menu">
             <li>
               <a href="undersida.html">Undersida</a>
             </li>
@@ -29,7 +31,7 @@
             <li>
               <a href="undersida4.html">Undersida 4</a>
             </li>
-          </ul>
+          </ul> -->
         </aside>
       </div>
     </div>
