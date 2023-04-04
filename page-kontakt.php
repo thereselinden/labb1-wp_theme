@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php echo 'hello from page-kontakt.php'; ?>
+
 <main>
   <section>
     <div class="container">
@@ -20,4 +20,5 @@
     </div>
   </section>
 </main>
+
 <?php get_footer(); ?>

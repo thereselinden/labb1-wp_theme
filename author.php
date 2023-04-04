@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 <main>
-  <?php echo 'hello from author.php' ?>
-
   <section>
     <div class="container">
       <div class="row">

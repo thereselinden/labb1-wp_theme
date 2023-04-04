@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php echo 'hello from single.php' ?>
 
 <main>
   <section>

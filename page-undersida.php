@@ -1,7 +1,5 @@
 <?php get_header() ?>
-<?php echo 'Hello from page-undersida.php';
-echo get_page_uri();
-?>
+
 <main>
 	<section>
 		<div class="container">

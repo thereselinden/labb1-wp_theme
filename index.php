@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php echo 'hello from index.php' ?>
+
 <main>
   <section>
     <div class="container">

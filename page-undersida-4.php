@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php echo 'hello from page-undersida-4.php'; ?>
+
 <main>
   <section>
     <div class="container">
@@ -21,4 +21,5 @@
     </div>
   </section>
 </main>
+
 <?php get_footer(); ?>
