@@ -43,7 +43,7 @@ add_action('wp_enqueue_scripts', 'labb1_register_scripts');
 function labb1_theme_setup()
 {
   add_theme_support('title-tag');
-  //add_theme_support('custom-logo');
+  add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'labb1_theme_setup');
@@ -59,3 +59,82 @@ function labb1_register_my_menus()
   ]);
 }
 add_action('after_setup_theme', 'labb1_register_my_menus');
+
+/****
+  Custom widgets
+ */
+
+
+function labb1_register_widget_areas()
+{
+  // register_sidebar(array(
+  //   'name'          => 'Header are one',
+  //   'id'            => 'header_area_one',
+  //   'description'   => 'This widget areas purpose is to allow search on site',
+  //   'before_widget' => '<section class="header-area header-area-one">',
+  //   'after_widget'  => '</section>',
+  //   'before_title'  => '<h4>',
+  //   'after_title'   => '</h4>',
+  // ));
+
+  register_sidebar(array(
+    'name'          => 'Aside area one',
+    'id'            => 'aside_area_one',
+    'description'   => 'This widget areas purpose is to allow search',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Aside area two',
+    'id'            => 'aside_area_two',
+    'description'   => 'This widget areas purpose is to display site pages',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Aside area three',
+    'id'            => 'aside_area_three',
+    'description'   => 'This widget areas purpose is to display post archive',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Aside area four',
+    'id'            => 'aside_area_four',
+    'description'   => 'This widget areas purpose is to display post categories',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Footer area one',
+    'id'            => 'footer_area_one',
+    'description'   => 'This widget areas purpose is for about us',
+    'before_widget' => '',
+    'after_widget'  => '',
+
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Footer area two',
+    'id'            => 'footer_area_two',
+    'description'   => 'This widget areas purpose is for contact information',
+    'before_widget' => '',
+    'after_widget'  => '',
+
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Footer area three',
+    'id'            => 'footer_area_three',
+    'description'   => 'This widget areas purpose is for social media information',
+    'before_widget' => '',
+    'after_widget'  => '',
+
+  ));
+}
+
+add_action('widgets_init', 'labb1_register_widget_areas');
