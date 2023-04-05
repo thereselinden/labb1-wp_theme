@@ -36,13 +36,7 @@
 
       </div>
       <div class="col-sm-6 hidden-xs">
-        <form id="searchform" class="searchform">
-          <div>
-            <label class="screen-reader-text">Sök efter:</label>
-            <input type="text" />
-            <input type="submit" value="Sök" />
-          </div>
-        </form>
+        <?php dynamic_sidebar('header_area_one'); ?>
       </div>
       <div class="col-xs-4 text-right visible-xs">
         <div class="mobile-menu-wrap">
@@ -54,13 +48,7 @@
   </div>
 </header>
 <div class="mobile-search">
-  <form id="searchform" class="searchform">
-    <div>
-      <label class="screen-reader-text">Sök efter:</label>
-      <input type="text" />
-      <input type="submit" value="Sök" />
-    </div>
-  </form>
+  <?php dynamic_sidebar('header_area_mobile'); ?>
 </div>
 
 <nav id="nav">
