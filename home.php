@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <main>
   <section>
     <div class="container">
@@ -10,33 +11,10 @@
             the_post();
             get_template_part('template-parts/post-excerpt');
           } ?>
-
           <?php the_posts_pagination(); ?>
-
         </div>
-        <aside id="secondary" class="col-xs-12 col-md-3">
-          <div id="sidebar">
-            <ul>
-              <li>
-                <form id="searchform" class="searchform">
-                  <div>
-                    <?php dynamic_sidebar('aside_area_one'); ?>
-                  </div>
-                </form>
-              </li>
-            </ul>
-            <ul role="navigation">
-              <li class="pagenav">
-                <?php dynamic_sidebar('aside_area_two'); ?>
-              </li>
-              <li>
-                <?php dynamic_sidebar('aside_area_three'); ?>
-              </li>
-              <li class="categories">
-                <?php dynamic_sidebar('aside_area_four'); ?>
-            </ul>
-          </div>
-        </aside>
+
+        <?php get_template_part('template-parts/aside-bar'); ?>
       </div>
     </div>
   </section>
