@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <?php wp_head() ?>
 </head>
+
 <header id="header">
   <div class="container">
     <div class="row">
@@ -27,12 +28,8 @@
           <a class="logo" href=<?php echo get_home_url() ?>>
             <?php echo get_bloginfo('name') ?>
           </a>
-
         <?php }
         ?>
-
-
-
 
       </div>
       <div class="col-sm-6 hidden-xs">

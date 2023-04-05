@@ -1,5 +1,4 @@
 <?php get_header() ?>
-
 <!-- TODO! Post thumbail sätter inte höjd auto har nu satt det som CSS i anpassat wp admin - KOLLA MER! -->
 <main>
   <section>
@@ -7,6 +6,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="hero">
+
             <?php if (have_posts()) {
               while (have_posts()) {
                 the_post(); ?>
@@ -16,12 +16,12 @@
                 </div>
             <?php }
             } ?>
+
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-
 
 <?php get_footer() ?>
