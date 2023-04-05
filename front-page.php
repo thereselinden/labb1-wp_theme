@@ -1,5 +1,6 @@
-<?php get_header()?>
+<?php get_header() ?>
 
+// TODO! Post thumbail sätter inte höjd auto har nu satt det som CSS i anpassat wp admin - KOLLA MER!
 <main>
   <section>
     <div class="container">
@@ -8,16 +9,19 @@
           <div class="hero">
             <?php if (have_posts()) {
               while (have_posts()) {
-                the_post(); 
-                the_content(); 
-              }   
-              } ?>
+                the_post(); ?>
+                <?php the_post_thumbnail('full'); ?>
+                <div class="text">
+                  <?php the_content(); ?>
+                </div>
+            <?php }
+            } ?>
           </div>
         </div>
       </div>
     </div>
   </section>
-  </main>
+</main>
 
 
-<?php get_footer()?>
+<?php get_footer() ?>
