@@ -14,7 +14,7 @@
     </div>
     <div class="row bottom">
       <div class="col-xs-12">
-        <p>Copyright &copy; Grupp X, 2016</p>
+        <?php dynamic_sidebar('footer_area_four') ?>
       </div>
     </div>
   </div>
