@@ -9,7 +9,31 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-8 col-sm-6">
-        <a class="logo" href=<?php echo get_home_url() ?>>Labb 1</a>
+        <?php
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo = wp_get_attachment_image_src($custom_logo_id);
+        $logo_alt_text = get_post_meta(
+          $custom_logo_id,
+          '_wp_attachment_image_alt',
+          true
+        );
+
+        if (has_custom_logo()) { ?>
+          <a class="logo" href=<?php echo get_home_url() ?>>
+            <?php echo '<img src="' . esc_url($logo[0]) . '" alt="' . $logo_alt_text . '" class="logo-img">'; ?>
+          </a>
+
+        <?php } else { ?>
+          <a class="logo" href=<?php echo get_home_url() ?>>
+            <?php echo get_bloginfo('name') ?>
+          </a>
+
+        <?php }
+        ?>
+
+
+
+
       </div>
       <div class="col-sm-6 hidden-xs">
         <form id="searchform" class="searchform">
