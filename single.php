@@ -8,7 +8,11 @@
           <?php if (have_posts()) {
             while (have_posts()) {
               the_post(); ?>
-              <article>
+              <article class="post-excerpt">
+
+                <?php the_post_thumbnail('full'); ?>
+                <h1><?php the_title(); ?></h1>
+                <?php get_template_part('template-parts/post-meta'); ?>
                 <?php the_content(); ?>
               </article>
           <?php }
