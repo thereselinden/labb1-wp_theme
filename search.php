@@ -1,0 +1,26 @@
+<?php get_header() ?>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div id="primary" class="col-xs-12 col-md-8 col-md-offset-2">
+          <h1>Sökresultat för: <?php echo get_search_query(); ?></h1>
+
+          <div class="searchform-wrap">
+            <?php dynamic_sidebar('header-area-mobile') ?>
+          </div>
+
+          <?php while (have_posts()) {
+            the_post();
+            get_template_part('template-parts/post-excerpt');
+          }; ?>
+          <?php the_posts_pagination(); ?>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<?php get_footer() ?>
