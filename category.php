@@ -9,39 +9,12 @@
           <h1><?php echo $page_object->cat_name; ?></h1>
 
           <?php while (have_posts()) {
-            the_post(); ?>
-            <article>
-              <?php the_post_thumbnail(array(636, 424)); ?>
-              <h2>
-                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-              </h2>
-              <ul class="meta">
-                <li>
-                  <i class="fa fa-calendar"></i>
-                  <?php echo get_the_date(); ?>
-                </li>
-                <li>
-                  <i class="fa fa-user"></i>
-                  <a href=" <?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> <?php the_author(); ?></a>
-                </li>
-                <li>
-                  <i class="fa fa-tag"></i>
-                  <?php the_category($separator = ', '); ?>
-                </li>
-              </ul>
-              <?php
-              the_excerpt();
-              ?>
-            </article>
-          <?php } ?>
+            the_post();
+            get_template_part('template-parts/post-excerpt');
+          } ?>
 
-          <nav class="navigation pagination">
-            <h2 class="screen-reader-text">Inläggsnavigering</h2>
-            <a class="prev page-numbers" href="">Föregående</a>
-            <span class="page-numbers current">1</span>
-            <a class="page-numbers" href="">2</a>
-            <a class="next page-numbers" href="">Nästa</a>
-          </nav>
+
+          <?php the_posts_pagination(); ?>
         </div>
         <aside id="secondary" class="col-xs-12 col-md-3">
           <div id="sidebar">
