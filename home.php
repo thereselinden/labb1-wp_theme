@@ -10,7 +10,9 @@
             the_post(); ?>
             <article>
               <?php if (is_home()) {  ?>
-                <?php the_post_thumbnail(array(636, 424)); ?>
+                <!-- <?php the_post_thumbnail(array(636, 424)); ?> -->
+                <?php the_post_thumbnail(); ?>
+
                 <h2>
                   <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h2>
@@ -42,64 +44,23 @@
               <li>
                 <form id="searchform" class="searchform">
                   <div>
-                    <label class="screen-reader-text">Sök efter:</label>
+                    <!-- <label class="screen-reader-text">Sök efter:</label>
                     <input type="text" />
-                    <input type="submit" value="Sök" />
+                    <input type="submit" value="Sök" /> -->
+                    <?php dynamic_sidebar('aside_area_one'); ?>
                   </div>
                 </form>
               </li>
             </ul>
             <ul role="navigation">
               <li class="pagenav">
-                <h2>Sidor</h2>
-                <ul>
-                  <li class="page_item current_page_item">
-                    <a href="">Blogg</a>
-                  </li>
-                  <li class="page_item">
-                    <a href="">Exempelsida</a>
-                  </li>
-                  <li class="page_item">
-                    <a href="">Kontakt</a>
-                  </li>
-                  <li class="page_item page_item_has_children">
-                    <a href="">Om mig</a>
-                    <ul class="children">
-                      <li class="page_item">
-                        <a href="">Intressen</a>
-                      </li>
-                      <li class="page_item page_item_has_children">
-                        <a href="">Portfolio</a>
-                        <ul class="children">
-                          <li class="page_item">
-                            <a href="">Projekt 1</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="page_item">
-                    <a href="">Startsida</a>
-                  </li>
-                </ul>
+                <?php dynamic_sidebar('aside_area_two'); ?>
               </li>
               <li>
-                <h2>Arkiv</h2>
-                <ul>
-                  <li>
-                    <a href="arkiv.html">oktober 2016</a>
-                  </li>
-                </ul>
+                <?php dynamic_sidebar('aside_area_three'); ?>
               </li>
               <li class="categories">
-                <h2>Kategorier</h2>
-                <ul>
-                  <li class="cat-item"><a href="">Natur</a> (1)</li>
-                  <li class="cat-item">
-                    <a href="">Okategoriserade</a> (3)
-                  </li>
-                </ul>
-              </li>
+                <?php dynamic_sidebar('aside_area_four'); ?>
             </ul>
           </div>
         </aside>
