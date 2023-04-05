@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-// TODO! Post thumbail sätter inte höjd auto har nu satt det som CSS i anpassat wp admin - KOLLA MER!
+<!-- TODO! Post thumbail sätter inte höjd auto har nu satt det som CSS i anpassat wp admin - KOLLA MER! -->
 <main>
   <section>
     <div class="container">
