@@ -63,12 +63,10 @@ add_action('after_setup_theme', 'labb1_register_my_menus');
 /****
   Custom widgets
  */
-
-
 function labb1_register_widget_areas()
 {
   register_sidebar(array(
-    'name'          => 'Header are one',
+    'name'          => 'Header area one',
     'id'            => 'header_area_one',
     'description'   => 'This widget areas purpose is to allow search on site',
     'before_widget' => '',
@@ -77,7 +75,7 @@ function labb1_register_widget_areas()
   ));
 
   register_sidebar(array(
-    'name'          => 'Header are mobile',
+    'name'          => 'Header area mobile',
     'id'            => 'header_area_mobile',
     'description'   => 'This widget areas purpose is to allow search on site',
     'before_widget' => '',
@@ -138,6 +136,14 @@ function labb1_register_widget_areas()
     'name'          => 'Footer area three',
     'id'            => 'footer_area_three',
     'description'   => 'This widget areas purpose is for social media information',
+    'before_widget' => '',
+    'after_widget'  => '',
+
+  ));
+  register_sidebar(array(
+    'name'          => 'Footer area four',
+    'id'            => 'footer_area_four',
+    'description'   => 'This widget areas purpose is to display copyrights',
     'before_widget' => '',
     'after_widget'  => '',
 
