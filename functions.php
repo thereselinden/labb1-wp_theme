@@ -65,23 +65,7 @@ add_action('after_setup_theme', 'labb1_register_my_menus');
  */
 function labb1_register_widget_areas()
 {
-  register_sidebar(array(
-    'name'          => 'Header area one',
-    'id'            => 'header_area_one',
-    'description'   => 'This widget areas purpose is to allow search on site',
-    'before_widget' => '',
-    'after_widget'  => '',
 
-  ));
-
-  register_sidebar(array(
-    'name'          => 'Header area mobile',
-    'id'            => 'header_area_mobile',
-    'description'   => 'This widget areas purpose is to allow search on site',
-    'before_widget' => '',
-    'after_widget'  => '',
-
-  ));
   register_sidebar(array(
     'name'          => 'Aside area one',
     'id'            => 'aside_area_one',
