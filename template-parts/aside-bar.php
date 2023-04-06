@@ -2,11 +2,7 @@
   <div id="sidebar">
     <ul>
       <li>
-        <form id="searchform" class="searchform">
-          <div>
-            <?php dynamic_sidebar('aside_area_one'); ?>
-          </div>
-        </form>
+        <?php get_search_form() ?>
       </li>
     </ul>
     <ul role="navigation">
