@@ -151,3 +151,22 @@ function labb1_register_widget_areas()
 }
 
 add_action('widgets_init', 'labb1_register_widget_areas');
+
+/****
+  Function to render post_pagination without links wrapped in div to match 
+  given css strukture
+ */
+function labb_1_pagination_output($template)
+{
+  $template = '
+		<nav class="navigation %1$s" role="navigation" aria-label="%4$s">
+			<h2 class="screen-reader-text">%2$s</h2>
+			%3$s
+		</nav>
+	';
+
+  return $template;
+
+  return $template;
+}
+add_filter('navigation_markup_template', 'labb_1_pagination_output', 99, 2);
