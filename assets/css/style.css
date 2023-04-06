@@ -386,7 +386,7 @@ article .categories > li > a {
   display: none;
 }
 
-.pagination .nav-links .page-numbers {
+.pagination > .page-numbers {
   background-color: crimson;
   color: white;
   display: inline-block;
@@ -394,7 +394,7 @@ article .categories > li > a {
   padding: 5px 10px;
 }
 
-.pagination .nav-links .page-numbers.current {
+.pagination > .page-numbers.current {
   background-color: white;
   color: crimson;
 }
