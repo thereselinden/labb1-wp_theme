@@ -32,8 +32,9 @@
         ?>
 
       </div>
+
       <div class="col-sm-6 hidden-xs">
-        <?php dynamic_sidebar('header_area_one'); ?>
+        <?php echo get_search_form() ?>
       </div>
       <div class="col-xs-4 text-right visible-xs">
         <div class="mobile-menu-wrap">
@@ -45,7 +46,7 @@
   </div>
 </header>
 <div class="mobile-search">
-  <?php dynamic_sidebar('header_area_mobile'); ?>
+  <?php get_search_form(); ?>
 </div>
 
 <nav id="nav">
