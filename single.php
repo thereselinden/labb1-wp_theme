@@ -20,7 +20,10 @@
           } ?>
 
         </div>
-        <?php get_template_part('template-parts/aside-bar.php') ?>
+
+        <aside id="secondary" class="col-xs-12 col-md-3">
+          <?php get_sidebar(); ?>
+        </aside>
 
       </div>
     </div>
