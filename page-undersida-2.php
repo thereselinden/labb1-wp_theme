@@ -16,7 +16,8 @@
           } ?>
         </div>
         <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
-          <?php wp_nav_menu(['theme_location' => 'aside-menu']); ?>
+          <!-- GET SIDEBAR HERE INSTEAD -->
+          <?php wp_nav_menu(['theme_location' => 'aside-menu', 'items_wrap' => '<ul class="side-menu">%3$s</ul>', 'container' => ""]); ?>
         </aside>
       </div>
     </div>
