@@ -9,7 +9,6 @@
       </div>
       <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
         <?php dynamic_sidebar('footer_area_three'); ?>
-
       </div>
     </div>
     <div class="row bottom">
