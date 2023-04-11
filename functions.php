@@ -45,6 +45,7 @@ function labb1_theme_setup()
   add_theme_support('title-tag');
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
+  add_theme_support('widgets');
 }
 add_action('after_setup_theme', 'labb1_theme_setup');
 
@@ -148,8 +149,6 @@ function labb_1_pagination_output($template)
 			%3$s
 		</nav>
 	';
-
-  return $template;
 
   return $template;
 }
