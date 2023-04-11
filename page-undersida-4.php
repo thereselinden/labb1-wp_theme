@@ -16,8 +16,8 @@
           } ?>
 
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-6">
-          <img src="<?php echo get_template_directory_uri() . '/assets/img/photo.jpg' ?>" />
+        <div class="col-xs-12 col-sm-4 col-md-6 contact">
+          <?php the_post_thumbnail('large'); ?>
         </div>
       </div>
     </div>
