@@ -5,16 +5,11 @@
     <div class="container">
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-8 col-md-offset-2">
-          <!-- <h1>Sökresultat för: <?php echo get_search_query(); ?></h1> -->
           <h1>Sökresultat för: <?php the_search_query(); ?></h1>
 
           <div class="searchform-wrap">
             <?php get_search_form() ?>
           </div>
-
-          <!-- <div class="searchform-wrap">
-            <?php dynamic_sidebar('header-area-mobile') ?>
-          </div> -->
 
           <?php while (have_posts()) {
             the_post();
