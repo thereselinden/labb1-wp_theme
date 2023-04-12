@@ -50,16 +50,18 @@ function labb1_theme_setup()
 add_action('after_setup_theme', 'labb1_theme_setup');
 
 /**** 
-  Theme support to set up menues 
+  Theme support to set up menus 
  */
 function labb1_register_my_menus()
 {
   register_nav_menus([
     'header-menu' => __('Header Menu'),
     'aside-menu' => __('Aside Menu'),
+    'social-menu' => __('Social media Menu'),
   ]);
 }
 add_action('after_setup_theme', 'labb1_register_my_menus');
+
 
 /****
   Custom widgets
@@ -142,14 +144,15 @@ add_action('widgets_init', 'labb1_register_widget_areas');
   given css strukture
  */
 function labb_1_pagination_output($template)
+
 {
+
   $template = '
 		<nav class="navigation %1$s" role="navigation" aria-label="%4$s">
 			<h2 class="screen-reader-text">%2$s</h2>
 			%3$s
 		</nav>
 	';
-
   return $template;
 }
 add_filter('navigation_markup_template', 'labb_1_pagination_output', 99, 2);
