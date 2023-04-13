@@ -68,11 +68,10 @@ add_action('after_setup_theme', 'labb1_register_my_menus');
  */
 function labb1_register_widget_areas()
 {
-
   register_sidebar(array(
     'name'          => 'Aside area one',
     'id'            => 'aside_area_one',
-    'description'   => 'This widget areas purpose is to allow search',
+    'description'   => 'This widget areas purpose is to display site pages',
     'before_widget' => '',
     'after_widget'  => '',
   ));
@@ -80,7 +79,7 @@ function labb1_register_widget_areas()
   register_sidebar(array(
     'name'          => 'Aside area two',
     'id'            => 'aside_area_two',
-    'description'   => 'This widget areas purpose is to display site pages',
+    'description'   => 'This widget areas purpose is to display post archive',
     'before_widget' => '',
     'after_widget'  => '',
   ));
@@ -88,14 +87,6 @@ function labb1_register_widget_areas()
   register_sidebar(array(
     'name'          => 'Aside area three',
     'id'            => 'aside_area_three',
-    'description'   => 'This widget areas purpose is to display post archive',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ));
-
-  register_sidebar(array(
-    'name'          => 'Aside area four',
-    'id'            => 'aside_area_four',
     'description'   => 'This widget areas purpose is to display post categories',
     'before_widget' => '',
     'after_widget'  => '',
