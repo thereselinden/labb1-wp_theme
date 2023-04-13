@@ -1,6 +1,7 @@
 <div id="sidebar">
   <ul>
     <li>
+      <label for="s">Sök efter:</label>
       <?php get_search_form() ?>
     </li>
   </ul>
