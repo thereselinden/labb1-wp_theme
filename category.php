@@ -6,7 +6,7 @@
       <div class="row">
         <div id="primary" class="col-xs-12 col-md-9">
           <?php $page_object = get_queried_object(); ?>
-          <h1><?php echo $page_object->cat_name; ?></h1>
+          <h1>Arkiv: <?php echo $page_object->cat_name; ?></h1>
 
           <?php while (have_posts()) {
             the_post();
