@@ -72,8 +72,8 @@ function labb1_register_widget_areas()
     'name'          => 'Aside area zero',
     'id'            => 'aside_area_zero',
     'description'   => 'This widget areas purpose is to display search form',
-    'before_widget' => '',
-    'after_widget'  => '',
+    'before_widget' => '<ul><li>',
+    'after_widget'  => '</li></ul>',
   ));
   register_sidebar(array(
     'name'          => 'Aside area one',
