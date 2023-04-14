@@ -132,7 +132,7 @@ add_action('widgets_init', 'labb1_register_widget_areas');
 
 /****
   Function to render post_pagination without links wrapped in div to match 
-  given css strukture
+  given css structure
  */
 function labb_1_pagination_output($template)
 
