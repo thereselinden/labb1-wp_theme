@@ -1,9 +1,5 @@
 <div id="sidebar">
-  <ul>
-    <li>
-      <?php dynamic_sidebar('aside_area_zero') ?>
-    </li>
-  </ul>
+  <?php dynamic_sidebar('aside_area_zero') ?>
   <ul role="navigation">
     <li class="pagenav">
       <?php dynamic_sidebar('aside_area_one'); ?>
