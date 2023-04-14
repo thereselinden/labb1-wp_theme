@@ -69,6 +69,13 @@ add_action('after_setup_theme', 'labb1_register_my_menus');
 function labb1_register_widget_areas()
 {
   register_sidebar(array(
+    'name'          => 'Aside area zero',
+    'id'            => 'aside_area_zero',
+    'description'   => 'This widget areas purpose is to display search form',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ));
+  register_sidebar(array(
     'name'          => 'Aside area one',
     'id'            => 'aside_area_one',
     'description'   => 'This widget areas purpose is to display site pages',
