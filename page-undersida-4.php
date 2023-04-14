@@ -1,3 +1,7 @@
+<?php $image_id = get_post_thumbnail_id();
+$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
+?>
+
 <?php get_header(); ?>
 
 <main>
@@ -17,7 +21,8 @@
 
         </div>
         <div class="col-xs-12 col-sm-4 col-md-6 contact">
-          <?php the_post_thumbnail('large'); ?>
+          <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo $image_alt ?>">
+
         </div>
       </div>
     </div>
