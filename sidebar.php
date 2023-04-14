@@ -1,8 +1,7 @@
 <div id="sidebar">
   <ul>
     <li>
-      <label for="s">Sök efter:</label>
-      <?php get_search_form() ?>
+      <?php dynamic_sidebar('aside_area_zero') ?>
     </li>
   </ul>
   <ul role="navigation">
