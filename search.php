@@ -11,10 +11,16 @@
             <?php get_search_form() ?>
           </div>
 
-          <?php while (have_posts()) {
-            the_post();
-            get_template_part('template-parts/post-excerpt');
-          }; ?>
+          <?php if (have_posts()) {
+            while (have_posts()) {
+              the_post();
+              get_template_part('template-parts/post-excerpt');
+            }
+          } else {
+            echo 'Tyvärr din sökning gav inget resultat';
+          }
+
+          ?>
           <?php the_posts_pagination(); ?>
 
         </div>
